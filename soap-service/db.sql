@@ -1,4 +1,10 @@
-CREATE DATABASE soap_db;
+CREATE DATABASE soap_db
+    WITH
+        OWNER = postgres
+        ENCODING = 'UTF8'
+        LOCALE_PROVIDER = 'libc'
+        CONNECTION LIMIT = -1
+        IS_TEMPLATE = False;
 
 CREATE TABLE availability (
     room_id SERIAL PRIMARY KEY,

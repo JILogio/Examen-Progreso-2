@@ -1,4 +1,10 @@
-CREATE DATABASE rest_db;
+CREATE DATABASE rest_db
+    WITH
+        OWNER = postgres
+        ENCODING = 'UTF8'
+        LOCALE_PROVIDER = 'libc'
+        CONNECTION LIMIT = -1
+        IS_TEMPLATE = False;
 
 CREATE TABLE reservations (
     reservation_id SERIAL PRIMARY KEY,
